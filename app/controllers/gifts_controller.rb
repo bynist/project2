@@ -31,7 +31,7 @@ class GiftsController < ApplicationController
     # POST /gifts.json
     def create
       @gift = current_user.gifts.create(gift_params)
-      # if @gift.save
+     % # if @gift.save
       # puts `#{@gift} create `
         redirect_to gift_path(@gift)
      

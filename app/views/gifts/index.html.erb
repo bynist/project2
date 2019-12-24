@@ -1,39 +1,75 @@
 
 <%# <p id="notice"><%= notice %></p> 
 
-<h1>Your Gift </h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>url</th>
-      <th>price</th>
-      <th>where_to_buy</th>
-       <th>description</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @gifts.each do |gift| %>
-      <tr>
-        <td><%= gift.name %></td>
-        <td>  <img src= "<%=gift.link %>" width=40></td>
-        <td><%= gift.price %></td>
-        <td><%= gift.where_to_buy %></td>
-        <td><%= gift.description %></td>
-        
+<div class="user-profile">
 
-        <td><%= link_to 'details', gift %> || </td>
-        <td><%= link_to 'Edit', edit_gift_path(gift) %>||</td>
-      <%#  %>
-        <td><%= link_to 'Delete', gift_path(gift.id),method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10 col-sm-10 col-md-6">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6OltAVgijbP-NK9deGg0DqI8467nvvdM2FE0FeExxq093iZB4iw&s" alt="" class="img-rounded img-responsive" width="100%" />
+                     </div>
+                    <div class="col-sm-6 col-md-8">
+                         <h1><%= @current_user.name %> </h1>
+                        
+                            <i class="glyphicon glyphicon-envelope"></i><%= @current_user.email %> 
+                            <br />
+                            <i class="glyphicon glyphicon-gift"></i><%= @current_user.brithday %> </p>
+                            <i class="glyphicon glyphicon-gift"></i><%= link_to '+ Add New Gift', new_gift_path %>  </p>
+                    </div>
+                   
+                   
+                </div>
+                <div class="row2">
+                <br><h2>Gift List:</h2>
+                  <div>
+                
+                      <div class="card-deck">
+                        <% @gifts.each do |gift| %>
+                        <div class="card">
+                         <img src= "<%=gift.link%> " class="card-img-top" >
+                          <div class="card-body">
+                            <h5 class="card-title"><%=gift.name%> </h5>
+                            <% if gift.status == true%>
+                              <p > Unavailable </p>
+                            <% else%>
+                               <p> available </p>
+                            <%end%>
+                            <p class="card-text"><small class="text-muted"> added at: <%=gift.created_at%></small></p>
+                          </div>
+                        
+                        </div>
+                          <%end%>
+                       
+ 
+ 
+                </div>
 
-<%= link_to 'New item', new_gift_path %> 
-<%# <%= link_to 'Back', root_path %> 
+
+
+
+
+
+
+                  </div>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+             
+              <%# <%= link_to 'Back', root_path %> 

@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+/* devise design */
+body{
+    background-color: red ;
+}
+.newForm-reg{
+    /* text-align: center; */
+    width: 50%;
+    margin-left: 20%;
+
+}
+.newForm-reg h2{
+    padding-bottom: 33px;
+}
+
+.form-control{
+    width: 40%;
+} 
+.field{
+
+}
+.actions{
+    padding-top: 33px;
+    margin-bottom: 5%;
+}
+
+.box {
+    /* display: block; */
+}
