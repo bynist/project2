@@ -1,1 +1,21 @@
-<h1>Wish List coming soon</h1>
+
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+<h1> Get Gift Right ,
+every time  </h1>
+ <% if !user_signed_in? %>
+ <button><%= link_to 'get started ', new_user_registration_path %> </button>
+ <% end%>

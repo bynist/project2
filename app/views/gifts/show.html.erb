@@ -1,0 +1,37 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gift.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <img src= "<%=@gift.link  %> " style="width:20px" >
+</p>
+<p>
+  <strong>Url:</strong>
+  <%= @gift.link %>
+</p>
+<p>
+  <strong>where to buy:</strong>
+  <%= @gift.where_to_buy %>
+</p>
+<p>
+  <strong>description:</strong>
+  <%= @gift.description %>
+</p>
+
+<p>
+  <strong>price:</strong>
+  <%= @gift.price %>
+</p>
+
+
+
+
+
+<%=link_to 'delete.',gift_path(@gift), method: :delete%>
+<%= link_to 'Edit', edit_gift_path(@gift) %> |
+<%= link_to 'Back', gifts_path %>

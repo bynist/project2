@@ -1,0 +1,37 @@
+
+
+<h1>edit  item</h1>
+
+<%= render 'form' %>
+
+<%= form_for @gift , url:{action: "update"} do |f|%>
+
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :link , 'link: '%><br>
+    <%= f.text_field :link %><br>
+
+    <%= f.label :price , 'price: '%><br>
+    <%= f.number_field :price ,min:1  %><br>
+
+    <%= f.label :where_to_buy , 'where to buy : '%>
+    <%= f.text_field :where_to_buy %><br>
+
+
+     <%= f.label :description , ' description: '%>
+    <%= f.text_field :description %><br>
+
+   <%# <%# <div class="field"> %>
+     <%= f.label :purchased %>
+    <%= f.check_box :status %>
+    <br>
+  <%# </div> %>
+
+    <%= f.submit "update  item " %>
+
+<% end %>
+
+
+
+<%= link_to 'Back', root_path %>
