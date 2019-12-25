@@ -40,12 +40,14 @@
                             <% else%>
                                <p> available </p>
                             <%end%>
+                            <i class="glyphicon glyphicon-gift"></i><%= link_to '+more details', gift_path(gift) %>  </p>
+                            
                             <p class="card-text"><small class="text-muted"> added at: <%=gift.created_at%></small></p>
                           </div>
                         
                         </div>
                           <%end%>
-                       
+                       <%# > %>
  
  
                 </div>

@@ -15,7 +15,7 @@
  */
 /* devise design */
 body{
-    background-color: red ;
+    /* background-color: red ; */
 }
 .newForm-reg{
     /* text-align: center; */
@@ -40,4 +40,20 @@ body{
 
 .box {
     /* display: block; */
+}
+/* navbar */
+#nav-componenet{
+    
+}
+#navpage{
+    font-family: 'Nunito', sans-serif;
+    background-color:	#d5d9dc !important;
+}
+.alert{
+    color: #999;
+    font-family: 'Nunito', sans-serif;
+}
+.notice{
+    font-family: 'Nunito', sans-serif;
+    color: #999;
 }

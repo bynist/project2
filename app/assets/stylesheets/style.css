@@ -13,7 +13,7 @@
 }
 
 .index-page{
-    background: red;
+    
     font-family: 'Nunito', sans-serif;
 }
 .section2{
@@ -65,4 +65,27 @@ small {
 display: block;
 line-height: 1.428571429;
 color: #999;
+}
+
+/* /xgifts/show */
+.show-page{
+    margin-left: 130px;
+}
+
+#gift-name{
+font-size: 60px;
+color:#944260;
+font-family: 'Nunito', sans-serif;
+}
+
+/* /gifts/edit */
+
+.editForm-gift  {
+    font-family: 'Nunito', sans-serif;
+    margin-left: 70px;
+    margin-right: 670px;
+}
+.editForm-gift h1  {
+   color:#944260;
+   padding-bottom: 20px;
 }

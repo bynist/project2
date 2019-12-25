@@ -31,7 +31,7 @@ class GiftsController < ApplicationController
     # POST /gifts.json
     def create
       @gift = current_user.gifts.create(gift_params)
-     % # if @gift.save
+      # if @gift.save
       # puts `#{@gift} create `
         redirect_to gift_path(@gift)
      
@@ -69,11 +69,12 @@ class GiftsController < ApplicationController
       # Use callbacks to share common setup or constraints between actions.
       def set_gift
         @gift = current_user.gifts.find(params[:id])
+        # @gift.avatar.attach(params[:avatar])
       end
   
       # Never trust parameters from the scary internet, only allow the white list through.
       def gift_params
-        params.require(:gift).permit(:name,:link, :price, :where_to_buy,:description, :status)
+        params.require(:gift).permit(:name,:link, :price, :where_to_buy,:description, :status, :avatar)
       end
 
 end

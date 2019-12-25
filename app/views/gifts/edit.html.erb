@@ -1,26 +1,29 @@
+<div class="editForm-gift ">
 
-
-<h1>edit  item</h1>
+<h1>Edit Gift</h1>
 
 <%= render 'form' %>
 
 <%= form_for @gift , url:{action: "update"} do |f|%>
 
-    <%= f.label :name %><br>
-    <%= f.text_field :name %><br>
+    <%= f.label :name,'Name: ' %><br>
+    <%= f.text_field :name ,class:"form-control" %><br>
 
     <%= f.label :link , 'link: '%><br>
-    <%= f.text_field :link %><br>
+    <%= f.text_field :link  ,class:"form-control"%><br>
+
+    <%= f.label  'Gift Image: '%><br>
+    <%= f.file_field :avatar %><br>
 
     <%= f.label :price , 'price: '%><br>
-    <%= f.number_field :price ,min:1  %><br>
+    <%= f.number_field :price ,min:1  ,class:"form-control" %><br>
 
     <%= f.label :where_to_buy , 'where to buy : '%>
-    <%= f.text_field :where_to_buy %><br>
+    <%= f.text_field :where_to_buy  ,class:"form-control" %><br>
 
 
      <%= f.label :description , ' description: '%>
-    <%= f.text_field :description %><br>
+    <%= f.text_area :description ,class:"form-control" %><br>
 
    <%# <%# <div class="field"> %>
      <%= f.label :purchased %>
@@ -28,10 +31,9 @@
     <br>
   <%# </div> %>
 
-    <%= f.submit "update  item " %>
-
+    <%= f.submit "Update  Item " ,class:"btn btn-outline-secondary" %>
+    <%= link_to 'Cancel ', gift_path(@gift),class:"btn btn-outline-secondary"%>
 <% end %>
 
 
-
-<%= link_to 'Back', root_path %>
+</div>

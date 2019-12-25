@@ -1,37 +1,51 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @gift.name %>
-</p>
 
-<p>
-  <strong>Url:</strong>
-  <img src= "<%=@gift.link  %> " style="width:20px" >
-</p>
-<p>
-  <strong>Url:</strong>
-  <%= @gift.link %>
-</p>
-<p>
-  <strong>where to buy:</strong>
-  <%= @gift.where_to_buy %>
-</p>
-<p>
-  <strong>description:</strong>
-  <%= @gift.description %>
-</p>
+<div class="show-page">
+          <strong id="gift-name" > <%= @gift.name %></strong>
+        <br>
+        <p>
+          <strong>image:</strong>
+          <% if @gift.avatar.attached? %>
+           <img src= "<%=(url_for(@user.avatar)) %>">
+           <%end%>
+        </p>
 
-<p>
-  <strong>price:</strong>
-  <%= @gift.price %>
-</p>
+        <p>
+          <img src= "<%=@gift.link %> " style="width:150px" >
+        </p>
+        <p>
+          <strong>Website:</strong>
+          <a href="<%=@gift.link %>">Visit website</a>
+        </p>
+        <p>
+          <strong>where to buy:</strong>
+          <%= @gift.where_to_buy %>
+        </p>
+        <p>
+          <strong>description:</strong>
+          <%= @gift.description %>
+        </p>
+
+        <p>
+          <strong>price:</strong>
+          <%= @gift.price %>
+        </p>
+         <p>
+          <strong>Purchased:</strong>
+          <% if @gift.status == true %>
+           Unavailable
+                 <% else%>
+                available
+                  <%end%>
+         </p>
 
 
 
 
-
-<%=link_to 'delete.',gift_path(@gift), method: :delete%>
-<%= link_to 'Edit', edit_gift_path(@gift) %> |
-<%= link_to 'Back', gifts_path %>
+          <%= link_to ' Back ', gifts_path ,class:"btn btn-outline-secondary" %>
+          <%=link_to 'delete',gift_path(@gift), method: :delete ,class:"btn btn-outline-secondary"%>
+          <%= link_to'Edit Your Gift ', edit_gift_path(@gift) ,class:"btn btn-outline-secondary"%> 
+          
+</div>
