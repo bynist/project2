@@ -5,9 +5,12 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav ">
                 
-            
-                <%= link_to 'Home ', root_path, :class => "nav-link nav-item dropdown" ,id:"dropdown-menu"%> 
+             <a class="alert nav-link nav-item dropdown text-primary"><%= alert %></a>
+             <a class="notice nav-link nav-item dropdown"><%= notice %></a> 
+               
 
+    
+       
                 <li class="nav-item dropdown" id="dropdown-menu">
                 <% if user_signed_in? %>
                             
@@ -26,12 +29,12 @@
                     
                     
                 </li>
+                 <%= link_to 'Home ', root_path, :class => "nav-link nav-item dropdown" ,id:"dropdown-menu"%> 
                 </ul>
  </div>
 
 </div>
-
- 
+   
 </nav>
 
  

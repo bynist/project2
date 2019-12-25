@@ -50,10 +50,10 @@ body{
     background-color:	#d5d9dc !important;
 }
 .alert{
-    color: #999;
+    color:#944260  !important;
     font-family: 'Nunito', sans-serif;
 }
 .notice{
     font-family: 'Nunito', sans-serif;
-    color: #999;
+    color:#944260  !important;
 }

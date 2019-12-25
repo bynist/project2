@@ -35,7 +35,7 @@
 }
  #buttonL a{
     position: relative;
-    border: 2px solid #d5d9dc ;
+    border: 0#px solid #d5d9dc ;
     border-radius: 12px;
     padding:20px 20px; 
     color:#944260;
@@ -60,7 +60,12 @@
     font-family: 'Nunito', sans-serif;
   }
   .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
-
+  body > div > div > div > div > div > div.row > div.col-sm-6.col-md-8 > h1{
+    color:#944260;
+  }
+  body > div > div > div > div > div > div.row2 > h2{
+    color: #999;
+  }
 small {
 display: block;
 line-height: 1.428571429;
@@ -70,6 +75,7 @@ color: #999;
 /* /xgifts/show */
 .show-page{
     margin-left: 130px;
+    margin-bottom: 13%;
 }
 
 #gift-name{
@@ -88,4 +94,29 @@ font-family: 'Nunito', sans-serif;
 .editForm-gift h1  {
    color:#944260;
    padding-bottom: 20px;
+}
+
+.card img {
+    height: 350px;
+}
+.paragaph{
+    text-align: justify;
+    color:#7fadaf ;
+    height: 120px;
+}
+
+#section3 {
+    text-align: center;
+    margin: 20px auto;
+}
+#section3 h2{
+  margin-top: 20px;
+    color:#2b6f68;
+}
+#foter{
+    color:#944260;   
+     background-color:  #d5d9dc;
+    padding: 3%;
+    margin-top: 5%;
+
 }

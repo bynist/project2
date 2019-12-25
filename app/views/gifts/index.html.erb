@@ -8,10 +8,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-6">
+        <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="well well-sm">
                 <div class="row">
-                    <div class="col-sm-6 col-md-4">
+                    <div class="col-sm-4 col-md-2">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6OltAVgijbP-NK9deGg0DqI8467nvvdM2FE0FeExxq093iZB4iw&s" alt="" class="img-rounded img-responsive" width="100%" />
                      </div>
                     <div class="col-sm-6 col-md-8">
@@ -29,7 +29,7 @@
                 <br><h2>Gift List:</h2>
                   <div>
                 
-                      <div class="card-deck">
+                      <div class="card-columns">
                         <% @gifts.each do |gift| %>
                         <div class="card">
                          <img src= "<%=gift.link%> " class="card-img-top" >
